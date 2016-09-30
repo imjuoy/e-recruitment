@@ -1,0 +1,35 @@
+.pretty-table
+{
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #000;
+}
+
+.pretty-table caption
+{
+  caption-side: bottom;
+  font-size: 1em;
+  font-style: italic;
+  text-align: right;
+  padding: 0.5em 0;
+}
+
+.pretty-table th, .pretty-table td
+{
+  border: 1px solid #666;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.pretty-table th
+{
+  color: #000;
+  background-color: #c8e0f8;
+  text-transform: uppercase;
+  font-size: 1em;
+  border: 2px solid #333;
+}

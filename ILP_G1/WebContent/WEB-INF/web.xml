@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ILP_G1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UserLogin</display-name>
+		<servlet-name>UL</servlet-name>
+		<servlet-class>controller.UserLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>FetchVacList</display-name>
+		<servlet-name>CVR</servlet-name>
+		<servlet-class>controller.FetchCreateVacReqDetailServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddVacReq</display-name>
+		<servlet-name>AVR</servlet-name>
+		<servlet-class>controller.AddVacReqServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>FetchCreateRecReqDetails</display-name>
+		<servlet-name>CRR</servlet-name>
+		<servlet-class>controller.FetchCreateRecReqDetailServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ARR</servlet-name>
+		<servlet-class>controller.AddRecReqServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>createPCform</servlet-name>
+		<jsp-file>/CreatePC.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>APC</servlet-name>
+		<servlet-class>controller.AddPCServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>viewPCform</servlet-name>
+		<jsp-file>/ViewPCform.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>SearchPCServlet</servlet-name>
+		<servlet-class>controller.SearchPCServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EPC</servlet-name>
+		<servlet-class>controller.EditPCServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ApproveVR</servlet-name>
+		<servlet-class>controller.ApproveVacReqServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VED_RR</servlet-name>
+		<servlet-class>controller.VED_RR_Servlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VED_VR</servlet-name>
+		<servlet-class>controller.VED_VR_Servlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Log4jInit</servlet-name>
+		<servlet-class>controller.Log4jInit</servlet-class>
+		<init-param>
+			<param-name>log4j-init-file</param-name>
+			<param-value>WEB-INF/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UL</servlet-name>
+		<url-pattern>/do.login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CVR</servlet-name>
+		<url-pattern>/do.CreateVacReq</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AVR</servlet-name>
+		<url-pattern>/createVR</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CRR</servlet-name>
+		<url-pattern>/do.CreateRecReq</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ARR</servlet-name>
+		<url-pattern>/createRR</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>createPCform</servlet-name>
+		<url-pattern>/do.CreatePC</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>APC</servlet-name>
+		<url-pattern>/createPC</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>viewPCform</servlet-name>
+		<url-pattern>/do.ViewPC</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchPCServlet</servlet-name>
+		<url-pattern>/searchPC</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EPC</servlet-name>
+		<url-pattern>/do.EditPC</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ApproveVR</servlet-name>
+		<url-pattern>/do.Approve</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VED_RR</servlet-name>
+		<url-pattern>/do.RRwork</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VED_VR</servlet-name>
+		<url-pattern>/do.VRwork</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Log4jInit</servlet-name>
+		<url-pattern>/Log4jInit</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>crudservlet</display-name>
+		<servlet-name>crudservlet</servlet-name>
+		<servlet-class>Controller.crudservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>crudservlet</servlet-name>
+		<url-pattern>/crudservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Loginservlet</display-name>
+		<servlet-name>Loginservlet</servlet-name>
+		<servlet-class>Controller.Loginservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Loginservlet</servlet-name>
+		<url-pattern>/Loginservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>empservlet</display-name>
+		<servlet-name>empservlet</servlet-name>
+		<servlet-class>Controller.empservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>empservlet</servlet-name>
+		<url-pattern>/empservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>dispservlet</display-name>
+		<servlet-name>dispservlet</servlet-name>
+		<servlet-class>Controller.dispservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispservlet</servlet-name>
+		<url-pattern>/dispservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Changepwdservlet</display-name>
+		<servlet-name>Changepwdservlet</servlet-name>
+		<servlet-class>Controller.Changepwdservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Changepwdservlet</servlet-name>
+		<url-pattern>/Changepwdservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Forgotpwdservlet</display-name>
+		<servlet-name>Forgotpwdservlet</servlet-name>
+		<servlet-class>Controller.Forgotpwdservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Forgotpwdservlet</servlet-name>
+		<url-pattern>/Forgotpwdservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>BGCServlet</display-name>
+		<servlet-name>BGCServlet</servlet-name>
+		<servlet-class>Controller.BGCServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BGCServlet</servlet-name>
+		<url-pattern>/BGCServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Approval</display-name>
+		<servlet-name>Approval</servlet-name>
+		<servlet-class>Controller.Approval</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Approval</servlet-name>
+		<url-pattern>/Approval</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Addservlet</display-name>
+		<servlet-name>Addservlet</servlet-name>
+		<servlet-class>Controller.Addservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Addservlet</servlet-name>
+		<url-pattern>/Addservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>displayDate</display-name>
+		<servlet-name>displayDate</servlet-name>
+		<servlet-class>Controller.displayDate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>displayDate</servlet-name>
+		<url-pattern>/displayDate</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>UpdateDate</display-name>
+		<servlet-name>UpdateDate</servlet-name>
+		<servlet-class>Controller.UpdateDate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateDate</servlet-name>
+		<url-pattern>/UpdateDate</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Schedule_BGC_servlet</display-name>
+		<servlet-name>Schedule_BGC_servlet</servlet-name>
+		<servlet-class>Controller.Schedule_BGC_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Schedule_BGC_servlet</servlet-name>
+		<url-pattern>/Schedule_BGC_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Editservlet</display-name>
+		<servlet-name>Editservlet</servlet-name>
+		<servlet-class>Controller.Editservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Editservlet</servlet-name>
+		<url-pattern>/Editservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>edit_servlet</display-name>
+		<servlet-name>edit_servlet</servlet-name>
+		<servlet-class>Controller.edit_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>edit_servlet</servlet-name>
+		<url-pattern>/edit_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>intermediate_servlet</display-name>
+		<servlet-name>intermediate_servlet</servlet-name>
+		<servlet-class>Controller.intermediate_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>intermediate_servlet</servlet-name>
+		<url-pattern>/intermediate_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>emp_dropdown_servlet</display-name>
+		<servlet-name>emp_dropdown_servlet</servlet-name>
+		<servlet-class>Controller.emp_dropdown_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>emp_dropdown_servlet</servlet-name>
+		<url-pattern>/emp_dropdown_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>editctc_servlet</display-name>
+		<servlet-name>editctc_servlet</servlet-name>
+		<servlet-class>Controller.editctc_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>editctc_servlet</servlet-name>
+		<url-pattern>/editctc_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Approveadmin</display-name>
+		<servlet-name>Approveadmin</servlet-name>
+		<servlet-class>Controller.Approveadmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Approveadmin</servlet-name>
+		<url-pattern>/Approveadmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>BGCStatusupdate</display-name>
+		<servlet-name>BGCStatusupdate</servlet-name>
+		<servlet-class>Controller.BGCStatusupdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BGCStatusupdate</servlet-name>
+		<url-pattern>/BGCStatusupdate</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>viewbgc_admin_servlet</display-name>
+		<servlet-name>viewbgc_admin_servlet</servlet-name>
+		<servlet-class>Controller.viewbgc_admin_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewbgc_admin_servlet</servlet-name>
+		<url-pattern>/viewbgc_admin_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>bgc_status_servlet</display-name>
+		<servlet-name>bgc_status_servlet</servlet-name>
+		<servlet-class>Controller.bgc_status_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bgc_status_servlet</servlet-name>
+		<url-pattern>/bgc_status_servlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>submit_status</display-name>
+		<servlet-name>submit_status</servlet-name>
+		<servlet-class>Controller.submit_status</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>submit_status</servlet-name>
+		<url-pattern>/submit_status</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>display_cand_details</display-name>
+		<servlet-name>display_cand_details</servlet-name>
+		<servlet-class>Controller.display_cand_details</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>display_cand_details</servlet-name>
+		<url-pattern>/display_cand_details</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>setquestion</display-name>
+		<servlet-name>setquestion</servlet-name>
+		<servlet-class>Controller.setquestion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>setquestion</servlet-name>
+		<url-pattern>/setquestion</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>checksession</display-name>
+		<servlet-name>checksession</servlet-name>
+		<servlet-class>Controller.checksession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checksession</servlet-name>
+		<url-pattern>/checksession</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>trying</display-name>
+		<servlet-name>trying</servlet-name>
+		<servlet-class>Controller.trying</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>trying</servlet-name>
+		<url-pattern>/trying</url-pattern>
+	</servlet-mapping>
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>Login</display-name>
+
+		<servlet-name>Login</servlet-name>
+
+		<servlet-class>controller.Login</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>SessionTracker</display-name>
+
+		<servlet-name>SessionTracker</servlet-name>
+
+		<servlet-class>controller.SessionTracker</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>Logout</display-name>
+
+		<servlet-name>Logout</servlet-name>
+
+		<servlet-class>controller.Logout</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>RecruitmentRequest</display-name>
+
+		<servlet-name>RecruitmentRequest</servlet-name>
+
+		<servlet-class>controller.RecruitmentRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>CandidateCriteria</display-name>
+
+		<servlet-name>CandidateCriteria</servlet-name>
+
+		<servlet-class>controller.CandidateCriteria</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>DisplayCandidateProfile</display-name>
+
+		<servlet-name>DisplayCandidateProfile</servlet-name>
+
+		<servlet-class>controller.DisplayCandidateProfile</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>VacancyIdList</display-name>
+
+		<servlet-name>VacancyIdList</servlet-name>
+
+		<servlet-class>controller.VacancyIdList</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>PCLogin</display-name>
+
+		<servlet-name>PCLogin</servlet-name>
+
+		<servlet-class>controller.PCLogin</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>PCViewRecruitmentRequest</display-name>
+
+		<servlet-name>PCViewRecruitmentRequest</servlet-name>
+
+		<servlet-class>controller.PCViewRecruitmentRequest</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>AddCandidate</display-name>
+
+		<servlet-name>AddCandidate</servlet-name>
+
+		<servlet-class>controller.AddCandidate</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>ViewPlacementConsultants</display-name>
+
+		<servlet-name>ViewPlacementConsultants</servlet-name>
+
+		<servlet-class>controller.ViewPlacementConsultants</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>CreateTestSchedule</display-name>
+
+		<servlet-name>CreateTestSchedule</servlet-name>
+
+		<servlet-class>controller.CreateTestSchedule</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>DisplayTests</display-name>
+
+		<servlet-name>DisplayTests</servlet-name>
+
+		<servlet-class>controller.DisplayTests</servlet-class>
+	</servlet>
+
+	<servlet>
+
+		<description>
+        </description>
+
+		<display-name>EditDeleteTests</display-name>
+
+		<servlet-name>EditDeleteTests</servlet-name>
+
+		<servlet-class>controller.EditDeleteTests</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>EmployeeIdListTA</display-name>
+		<servlet-name>EmployeeIdListTA</servlet-name>
+		<servlet-class>controller.EmployeeIdListTA</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>SelectTA</display-name>
+		<servlet-name>SelectTA</servlet-name>
+		<servlet-class>controller.SelectTA</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>DisplayEditDeleteCandidateStatus</display-name>
+		<servlet-name>DisplayEditDeleteCandidateStatus</servlet-name>
+		<servlet-class>controller.DisplayEditDeleteCandidateStatus</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>DisplayEditDeleteCandStatus</display-name>
+		<servlet-name>DisplayEditDeleteCandStatus</servlet-name>
+		<servlet-class>controller.DisplayEditDeleteCandStatus</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>DisplayDeleteTA</display-name>
+		<servlet-name>DisplayDeleteTA</servlet-name>
+		<servlet-class>controller.DisplayDeleteTA</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>PCDisplayCandidates</display-name>
+		<servlet-name>PCDisplayCandidates</servlet-name>
+		<servlet-class>controller.PCDisplayCandidates</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>PCEditDeleteModel</display-name>
+		<servlet-name>PCEditDeleteModel</servlet-name>
+		<servlet-class>controller.PCEditDeleteModel</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>TADisplayTests</display-name>
+		<servlet-name>TADisplayTests</servlet-name>
+		<servlet-class>controller.TADisplayTests</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+    	</description>
+		<display-name>TADisplayEditDeleteCandStatus</display-name>
+		<servlet-name>TADisplayEditDeleteCandStatus</servlet-name>
+		<servlet-class>controller.TADisplayEditDeleteCandStatus</servlet-class>
+	</servlet>
+	<servlet-mapping>
+
+		<servlet-name>Login</servlet-name>
+
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>SessionTracker</servlet-name>
+
+		<url-pattern>/SessionTracker</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Logout</servlet-name>
+
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>RecruitmentRequest</servlet-name>
+
+		<url-pattern>/RecruitmentRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>CandidateCriteria</servlet-name>
+
+		<url-pattern>/CandidateCriteria</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>DisplayCandidateProfile</servlet-name>
+
+		<url-pattern>/DisplayCandidateProfile</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>VacancyIdList</servlet-name>
+
+		<url-pattern>/VacancyIdList</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>PCLogin</servlet-name>
+
+		<url-pattern>/PCLogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>PCViewRecruitmentRequest</servlet-name>
+
+		<url-pattern>/PCViewRecruitmentRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>AddCandidate</servlet-name>
+
+		<url-pattern>/AddCandidate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>ViewPlacementConsultants</servlet-name>
+
+		<url-pattern>/ViewPlacementConsultants</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>CreateTestSchedule</servlet-name>
+
+		<url-pattern>/CreateTestSchedule</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>DisplayTests</servlet-name>
+
+		<url-pattern>/DisplayTests</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>EditDeleteTests</servlet-name>
+
+		<url-pattern>/EditDeleteTests</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EmployeeIdListTA</servlet-name>
+		<url-pattern>/EmployeeIdListTA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectTA</servlet-name>
+		<url-pattern>/SelectTA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayEditDeleteCandidateStatus</servlet-name>
+		<url-pattern>/DisplayEditDeleteCandidateStatus</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayEditDeleteCandStatus</servlet-name>
+		<url-pattern>/DisplayEditDeleteCandStatus</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisplayDeleteTA</servlet-name>
+		<url-pattern>/DisplayDeleteTA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PCDisplayCandidates</servlet-name>
+		<url-pattern>/PCDisplayCandidates</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PCEditDeleteModel</servlet-name>
+		<url-pattern>/PCEditDeleteModel</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TADisplayTests</servlet-name>
+		<url-pattern>/TADisplayTests</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TADisplayEditDeleteCandStatus</servlet-name>
+		<url-pattern>/TADisplayEditDeleteCandStatus</url-pattern>
+	</servlet-mapping>
+</web-app>
