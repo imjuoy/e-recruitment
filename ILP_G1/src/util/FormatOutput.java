@@ -18,8 +18,8 @@ public class FormatOutput {
 			c = upKEY.charAt(i);
 			pos[i]=upTXT.indexOf(c);
 		}
-		//System.out.println(pos[0]);
-		//System.out.println(pos[1]);
+		System.out.println(pos[0]);
+		System.out.println(pos[1]);
 		int h=0;
 		//System.out.println("h value outside loop="+h);
 	
