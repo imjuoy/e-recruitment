@@ -10,6 +10,7 @@ public class FormatOutput {
 		String upKEY = KEY.toUpperCase();
 		char c ='\0';
 		int i = 0;
+		String heythere= "heythere";
 		//System.out.println(upKEY.length());
 		int pos[] = new int[upKEY.length()];
 		
