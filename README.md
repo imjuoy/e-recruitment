@@ -1,7 +1,7 @@
 # e-recruitment
 
-An e-recruitment application built using MVC framework.
-Servlets- JSP have been used for the Veiw Layer.
+An e-recruitment application built on MVC framework and Java J2EE.
+Servlets-JSP have been used for the Veiw Layer.
 Java beans have been used for the Business layer.
 Mysql has been used as backend.
 
